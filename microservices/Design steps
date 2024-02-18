@@ -1,0 +1,65 @@
+[1.] Design for failure
+- Microservices should be designed to tolerate failure at every level, from infrastructure to individual services.
+- Use techniques such as circuit breakers, bulkheads & graceful degradation.
+
+Bulkhead Pattern : A design principle that aims to isolate different parts of an application to prevent failures from spreading. By dividing the system into multiple partitions,
+it ensures that a problem in one partition does not cascade into others, providing a higher degree of fault tolerance
+Circuit breakers : A designed to prevent a cascading failure by monitoring the interactions between services or components. When it detects a predefined number of failures or timeouts, the circuit breaker “trips” and temporarily blocks any further calls to the failing service, allowing it to recover.
+
+[2.] Keep services small and focused
+- A microservice should be designed to do one thing well.
+
+[3.] Use lightweight communication protocols
+- Microservices should communicate with each other using lightweight protocols such as REST, gRPC or messaging queues.
+- This helps to reduce overhead and increase performance.
+
+[4.] Implement service discovery
+- Microservices should be able to discover and communicate with each other dynamically.
+- Use service registries such as Consul or Eureka or use DNS-based service discovery.
+
+Service discovery helps you discover, track, and monitor the health of services within a network.
+Service discovery registers and maintains a record of all your services in a service catalog
+
+Service Registry is a crucial part of service identification. It’s a database containing the network locations of service instances
+
+[5.] Automate testing & deployment
+- Microservices should be thoroughly tested and automated for deployment, using techniques such as Ci/Cd & automated testing.
+
+[6.] Decentralized data management
+- Data should be managed by the services that own it, rather than being stored in a central database.
+- This helps to reduce coupling between services and enables independent evolution.
+
+[7.] Monitor services proactively
+- To understand how your microservices are performing, it's important to collect & analyze metrics like latency, throughput, and error rates.
+- Use monitoring tools such as Prometheus or Grafana, to ensure that they are performing as expected and to identify potential issues before they become critical.
+
+[8.] Implement security at all levels
+- Security should be implemented at every level of the microservices architecture, including infrastructure, services, and communication.
+- Use techniques such as SSL/TLS, OAuth2, and JWT.
+
+A JWT is a means of verifying authentication.
+It is generated upon a successful authentication request and hence forth passed with each request to let the server know this user is authenticated.
+
+SSL is a lower level form of security, encrypting every request from and to the server to prevent interception and retains integrity
+SSL stands for Secure Socket Layer while TLS stands for Transport Layer Security. Both Secure Socket Layer and Transport Layer Security are the protocols used to provide security between web browsers and web servers. The main difference between Secure Socket Layer and Transport Layer Security is that, in SSL (Secure Socket Layer), the Message digest is used to create a master secret and It provides the basic security services which are Authentication and confidentiality. while In TLS (Transport Layer Security),
+a Pseudo-random function is used to create a master secret.
+
+[9.] Centralized logging
+- Logs from all services should be aggregated in a centralized location, to enable easy debugging and troubleshooting.
+
+[10.] Standardize development processes
+- Development processes should be standardized across all teams, including coding standards, testing frameworks & deployment procedures.
+- This helps to ensure consistency and reduce the risk of errors.
+
+[11.] Use containerization
+- Use technologies like Docker & Kubernetes to simplify deployment and scaling of microservices.
+
+[12.] Implement resiliency patterns
+- In addition to designing for failure, you can implement specific resiliency patterns to improve the reliability & availability of your microservices.
+- Use retry policies, caching & load shedding.
+
+[13.] Asynchronous communication
+- Use event-driven architecture to decouple microservices and make them more scalable.
+
+[14.] Define clear APIs
+- Each microservice should expose a well-defined API that is easy to use and understand.
