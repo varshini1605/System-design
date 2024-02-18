@@ -1,0 +1,51 @@
+Google Cloud Load Balancing is like a traffic manager for applications hosted on the internet or within a private network. It ensures that the incoming requests to your applications are distributed efficiently among multiple servers, preventing any single server from getting overwhelmed.
+
+Google Cloud Load Balancing:
+Google Cloud Load Balancing is a managed service that makes this process super efficient. It helps in scaling, ensuring high availability, and managing traffic for both internet-facing and private applications.
+
+Types of Load Balancing:
+1. Global vs. Regional Load Balancing:
+  - Global Load Balancing spreads traffic across servers in different parts of the world.
+  - Regional Load Balancing is more localized, distributing traffic within the same geographical region.
+
+2. Internal vs. External Load Balancing:
+  - External Load Balancing is accessible from the internet, used for web, application, and database services.
+  - Internal Load Balancing is only accessed within a network, great for running applications with an internal IP address.
+
+Load Balancing Options:
+1. Network Load Balancing:
+  - Distributes TCP or UDP traffic among virtual machines within the same region.
+
+2. HTTP(S) Load Balancers:
+  - Global, proxy-based Layer 7 load balancer for running and scaling services worldwide.
+
+3. Proxy-based Load Balancers (TCP & SSL):
+  - TCP Proxy for distributing TCP traffic.
+  - SSL Proxy for distributing SSL traffic.
+
+Components:
+1. Backend Services:
+  - Defines how traffic is distributed.
+  - Contains protocol, distribution settings, health checks, and timeouts.
+
+2. Health Checks:
+  - Determines if backend services are responding properly.
+
+3. SSL Certificates:
+  - Ensures privacy and security for network communications.
+
+4. IPv6 Termination:
+  - Handles IPv6 requests and proxies them over IPv4 to backends.
+
+How It Works:
+Imagine users from different locations sending requests. External load balancers handle traffic from the internet, distributing it globally. Internal load balancers then manage traffic within specific regions and zones.
+
+Choosing the Right Load Balancer:
+Consider whether you need global or regional load balancing, external or internal load balancing, and the type of traffic. Use the provided flowchart to select the right load balancer based on your requirements.
+
+Additional Information:
+- Google Cloud Load Balancers offer features like SSL/TLS termination, health checks, content-based routing, and more.
+- GCP Load Balancers can span multiple regions for global distribution.
+
+Monitoring and Troubleshooting:
+Google Cloud provides monitoring through services like Stackdriver, allowing you to keep an eye on performance and resolve any issues.
