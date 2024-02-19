@@ -1,0 +1,21 @@
+Factory Method is a Creational Design Pattern that allows an interface or a class to create an object, 
+but lets subclasses decide which class or object to instantiate.
+
+while adding new features like tamil .
+Have to change the whole code because now most part of the code is coupled with the English class and 
+developers have to make changes to the entire codebase. 
+
+
+Solution by Factory Method:
+Its solution is to replace the straightforward object construction calls with calls to the special factory method. Actually, 
+there will be no difference in the object creation but they are being called within the factory method.
+
+Advantages of using Factory method: 
+We can easily add new types of products without disturbing the existing client code.
+Generally, tight coupling is being avoided between the products and the creator classes and objects.
+
+Disadvantages of using Factory method:
+To create a particular concrete product object, the client might have to sub-class the creator class.
+You end up with a huge number of small files i.e, cluttering the files.
+
+Credits:Geeksforgeeks
