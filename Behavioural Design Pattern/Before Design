@@ -2,3 +2,93 @@
 It is implemented in Python by dynamically replacing the content of a method defined inside a class with the contents of functions defined outside of the class. 
 It enables selecting the algorithm at run-time. This method is also called as Policy Method."""
 
+"""Challenges Without Using Strategy Pattern:
+Limited Flexibility: Implementing sorting algorithms directly within the main sorting class can make the code inflexible. Adding new sorting algorithms or changing existing ones would require modifying the main class, which violates the Open/Closed Principle.
+Code Duplication: Without a clear structure, you may end up duplicating sorting logic to handle different algorithms. This can lead to maintenance issues and inconsistency in the system.
+Hard-Coded Logic: Implementing sorting logic directly within the main sorting class can make the code rigid and difficult to extend or modify. Making changes to the sorting algorithm becomes cumbersome and error-prone."""
+step 1:
+
+class Employee:
+    def __init__(self,name,job,salary):
+        self.name=name
+        self.job=job
+        self.salary=salary
+        
+    
+if __name__=="__main__":
+    f=Employee("Rahul","CEO","900")
+    f=Employee("Ragu","SDE","80")
+    print(f"{f.name},{f.job},{f.salary}")
+
+
+Step2:
+
+class Employee:
+    def __init__(self,name,job,salary):
+        self.name=name
+        self.job=job
+        self.salary=salary
+        
+    
+if __name__=="__main__":
+    employee=[
+    Employee("Rahul","CEO","900"),
+    Employee("Ragu","SDE","80"),
+    ]
+    for i in employee:
+        print(f"{i.name},{i.job},{i.salary}")
+
+
+Srep 3:
+class Employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+  
+class CEO(Employee):
+    def get_job(self):
+        return "CEO"
+    
+class SDE(Employee):
+    def get_job(self):
+        return "SDE"
+        
+        
+    
+if __name__=="__main__":
+    employee=[
+    CEO("Rahul","900"),
+    SDE("Ragu","80"),
+    ]
+    for i in employee:
+        print(f"{i.name},{i.get_job()},{i.salary}")
+
+Step3
+
+class Employee:
+    def __init__(self,name):
+        self.name=name
+  
+class CEO(Employee):
+    def get_job(self):
+        return "CEO"
+    
+    def salary(self):
+        return "$900"
+    
+class SDE(Employee):
+    def get_job(self):
+        return "SDE"
+    def salary(self):
+        return "$80"
+        
+        
+    
+if __name__=="__main__":
+    employee=[
+    CEO("Rahul"),
+    SDE("Ragu"),
+    ]
+    for i in employee:
+        print(f"{i.name},{i.get_job()},{i.salary()}")
+
