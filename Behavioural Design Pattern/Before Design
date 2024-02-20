@@ -1,7 +1,3 @@
-"""allows you to define the complete family of algorithms, encapsulates each one and putting each of them into separate classes and also allows to interchange there objects.
-It is implemented in Python by dynamically replacing the content of a method defined inside a class with the contents of functions defined outside of the class. 
-It enables selecting the algorithm at run-time. This method is also called as Policy Method."""
-
 """Challenges Without Using Strategy Pattern:
 Limited Flexibility: Implementing sorting algorithms directly within the main sorting class can make the code inflexible. Adding new sorting algorithms or changing existing ones would require modifying the main class, which violates the Open/Closed Principle.
 Code Duplication: Without a clear structure, you may end up duplicating sorting logic to handle different algorithms. This can lead to maintenance issues and inconsistency in the system.
