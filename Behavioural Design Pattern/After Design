@@ -1,0 +1,12 @@
+"""allows you to define the complete family of algorithms, encapsulates each one and putting each of them into separate classes and also allows to interchange there objects.
+It is implemented in Python by dynamically replacing the content of a method defined inside a class with the contents of functions defined outside of the class. 
+It enables selecting the algorithm at run-time. This method is also called as Policy Method."""
+
+"""How Strategy Pattern helps to solve above challenges :
+The Strategy Design Pattern addresses these challenges by encapsulating each sorting algorithm into separate classes. This allows for better organization, code reuse, and flexibility in the system. Here’s how the Strategy Pattern helps:
+
+Code Reusability: By encapsulating sorting algorithms into separate strategy classes, you can reuse these strategies across different parts of the system. This reduces code duplication and promotes maintainability.
+Flexibility and Extensibility: With the Strategy Pattern, you can easily add new sorting algorithms or change existing ones without modifying existing code. Each strategy is independent and can be swapped or extended without affecting other parts of the system.
+Separation of Concerns: The Strategy Pattern promotes a clean separation of concerns by isolating sorting logic into separate strategy classes. This improves code readability, testability, and maintainability."""
+
+
