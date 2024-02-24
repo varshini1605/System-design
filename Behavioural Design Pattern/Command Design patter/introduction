@@ -1,0 +1,16 @@
+The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object, allowing parameterization of clients with different requests, queuing of requests,
+and support for undoable operations(action or a series of actions that can be reversed or undone in a system).
+
+Components of the Command Design Pattern
+1. Command Interface:The Command Interface is like a rulebook that all command classes follow.
+2. Concrete Command Classes:Concrete Command Classes are the specific commands, like turning on a TV
+These classes act as executable instructions that the remote control can trigger without worrying about the nitty-gritty details of how each command accomplishes its task.
+3. Invoker (Remote Control):The Invoker, often a remote control, is the one responsible for initiating command execution.
+4. Receiver (Devices):The Receiver is the device that knows how to perform the actual operation associated with a command.
+It could be a TV, stereo, or any other device. Receivers understand the specific tasks mentioned in commands.
+
+
+What can be the challenges while implementing this system?
+First challenges is that devices can have different functionalities, so designing a remote control that can seamlessly handle different device types with varying functionalities without becoming overly complex or device-specific.
+Implementing a remote control that supports various commands without tightly coupling ensuring the remote control can execute commands for different devices without needing extensive modifications for each new command or device type.
+Designing a system that allows users to customize the behavior of the remote control dynamically
